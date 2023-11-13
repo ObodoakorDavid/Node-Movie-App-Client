@@ -1,0 +1,15 @@
+/** @format */
+
+.movie_card div > span::before {
+  content: "•";
+  color: var(--very-light-gray);
+}
+
+.movie_card > p {
+  color: var(--white);
+}
+
+.movie_card img {
+  object-fit: cover;
+  height: 200px;
+}

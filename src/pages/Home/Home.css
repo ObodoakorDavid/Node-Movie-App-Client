@@ -1,0 +1,63 @@
+/* removes the bars */
+.carousel::-webkit-scrollbar,
+.inner_carousel::-webkit-scrollbar,
+.carousel_item::-webkit-scrollbar {
+  width: 200px;
+}
+
+.carousel {
+  cursor: pointer;
+  overflow: hidden;
+}
+.inner_carousel {
+  overflow-x: scroll;
+}
+
+.carousel_item img {
+  width: 100%;
+  width: 300px;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  transition: 0.2s ease-in-out;
+}
+
+.carousel_item:hover img {
+  transform: scale(1.05);
+}
+
+.carousel_item {
+  min-width: 300px;
+  overflow: hidden;
+}
+
+.bookmark_icon {
+  top: 5%;
+  right: 10%;
+  background-color: rgba(53, 52, 52, 0.6);
+  font-size: 40px;
+  padding: 8px;
+  transition: 0.4s ease-in-out;
+  cursor: pointer;
+}
+
+.carousel_item div {
+  bottom: -10px;
+  left: 10px;
+}
+
+.carousel_item div div > p:not(:nth-child(1))::before,
+.carousel_item div > span:not(:nth-child(1))::before {
+  content: "•";
+  padding-right: 5px;
+  color: var(--very-light-gray);
+}
+
+.carousel_item div div {
+  color: var(--white);
+}
+
+@media (width > 768px) {
+  .carousel {
+    width: calc(100vw - 200px);
+  }
+}

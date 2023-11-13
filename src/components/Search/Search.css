@@ -1,0 +1,20 @@
+/** @format */
+
+/* .search {
+  border-bottom: 2px solid red;
+  border-bottom: 2px solid var(--light-gray);
+  border-width: 80%;
+} */
+
+.search input {
+  /* border: none; */
+  outline: none;
+  border: 0px;
+  border-bottom: 2px solid var(--dark-gray);
+  caret-color: #fc4747;
+  color: var(--white);
+  /* border-bottom: 2px solid red; */
+}
+.search input:focus {
+  border-bottom: 2px solid #5a698f;
+}

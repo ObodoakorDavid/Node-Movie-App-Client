@@ -1,0 +1,13 @@
+input {
+  outline: none;
+  border: 0px;
+  border-bottom: 1px solid #5a698f;
+  caret-color: #fc4747;
+  color: var(--white);
+  transition: 0.3s ease-in-out;
+}
+
+input:hover {
+  /* cursor: pointer; */
+  border-bottom: 1px solid var(--white);
+}

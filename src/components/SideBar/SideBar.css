@@ -1,0 +1,61 @@
+/** @format */
+
+.sidebar {
+  background-color: #161d2f;
+}
+
+.sidebar img {
+  cursor: pointer;
+}
+
+/* Dropwon  */
+
+.dropdown {
+  right: 5%;
+  bottom: -150%;
+  z-index: 1;
+}
+
+.dropdown a {
+  width: 100%;
+}
+
+.sidebar img {
+  width: 30px;
+  /* border-radius: 50%; */
+}
+
+@media (width > 576px) {
+  .sidebar {
+    border-radius: 16px;
+  }
+  .dropdown {
+    right: 0%;
+  }
+}
+
+@media (width > 768px) {
+  .sidebar {
+    height: 90vh;
+    position: sticky;
+    top: 30px;
+  }
+
+  .dropdown {
+    bottom: 7%;
+    right: 3%;
+  }
+}
+
+.icons {
+  font-size: 30px;
+}
+
+.icons-secondary {
+  color: grey;
+  transition: 0.3s ease-in-out;
+}
+
+.icons-secondary:hover {
+  color: var(--red);
+}
