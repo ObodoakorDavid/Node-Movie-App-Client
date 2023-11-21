@@ -1,13 +1,10 @@
 import React from "react";
 import MovieCarousel from "./MovieCarousel";
+import Loading from "../../utils/Loading";
 
 const Trending = ({ movies, error, loading, updateUI }) => {
   if (loading) {
-    return (
-      <div>
-        <p>Loading</p>
-      </div>
-    );
+    return <Loading />;
   }
 
   if (error) {

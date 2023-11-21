@@ -37,7 +37,6 @@ function App() {
                 <Route path="/update" element={<UpdateProfile />} />
               </Route>
             </Route>
-
             <Route path="*" element={<Error404 />} />
           </Routes>
         </AuthProvider>

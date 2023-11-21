@@ -4,17 +4,14 @@ import { useFetch } from "../../hooks/useFetch";
 import MovieCard from "../../components/MovieCard/MovieCard";
 import { useSearchFilter } from "../../hooks/useSearchFilter";
 import SearchResults from "../../components/SearchResults/SearchResults";
+import Loading from "../../utils/Loading";
 
 const TvSeries = () => {
   const { data, error, loading, updateUI } = useFetch("/api/movie/series");
   const { userInput, filteredMovies } = useSearchFilter(data);
 
   if (loading) {
-    return (
-      <div className="py-5">
-        <p>Loading</p>
-      </div>
-    );
+    return <Loading />;
   }
 
   if (error) {

@@ -8,9 +8,7 @@ import { PiTelevisionFill } from "react-icons/pi";
 import { BsFillBookmarkFill } from "react-icons/bs";
 import { MdSpaceDashboard, MdMovie } from "react-icons/md";
 import Dropdown from "./Dropdown";
-
-//testing
-import logo from "../../assets/react.svg";
+import avatar from "../../assets/images/default-avatar.jpg";
 import useAuth from "../../hooks/useAuth";
 
 const SideBar = () => {
@@ -72,7 +70,12 @@ const SideBar = () => {
       </div>
 
       <div className="mt-md-auto">
-        <img src={user ? user.image : logo} onClick={handleDropdown} alt="" />
+        <img
+          className="rounded-4"
+          src={user ? user.image : avatar}
+          onClick={handleDropdown}
+          alt=""
+        />
         {isOpen ? <Dropdown handleDropdown={handleDropdown} /> : null}
       </div>
     </div>

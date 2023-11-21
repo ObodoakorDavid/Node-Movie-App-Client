@@ -26,7 +26,7 @@ export const useFetch = (endpoint, token) => {
         setLoading(false);
       }
     }
-    
+
     setTimeout(() => {
       getData();
     }, 2000);
@@ -57,7 +57,7 @@ export const useFetch = (endpoint, token) => {
 
   const handleRemoveBookmark = async (movieId, token) => {
     try {
-      const { data } = await axiosInstance.get(
+      const { data: test } = await axiosInstance.get(
         `/api/bookmark/remove/${movieId}`,
         {
           headers: {
@@ -65,8 +65,10 @@ export const useFetch = (endpoint, token) => {
           },
         }
       );
-      console.log(data);
-      toast.success(data.message);
+      console.log(test);
+      toast.success(test.message);
+      const updatedData = data.filter((movie) => movie._id !== movieId);
+      setData(updatedData);
     } catch (error) {
       console.log(error);
       toast.error("Something went wrong, try again");

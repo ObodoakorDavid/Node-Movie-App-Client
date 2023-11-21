@@ -1,13 +1,10 @@
 import React from "react";
 import MovieCard from "../../components/MovieCard/MovieCard";
+import Loading from "../../utils/Loading";
 
 const Recommended = ({ movies, error, loading, updateUI }) => {
   if (loading) {
-    return (
-      <div>
-        <p>Loading</p>
-      </div>
-    );
+    return <Loading />;
   }
 
   if (error) {

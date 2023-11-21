@@ -6,6 +6,7 @@ import useAuth from "../../hooks/useAuth";
 import MovieCard from "../../components/MovieCard/MovieCard";
 import { useSearchFilter } from "../../hooks/useSearchFilter";
 import SearchResults from "../../components/SearchResults/SearchResults";
+import Loading from "../../utils/Loading";
 
 const Bookmark = () => {
   const { token } = useAuth();
@@ -18,7 +19,7 @@ const Bookmark = () => {
   const { userInput, filteredMovies } = useSearchFilter(bookmarks);
 
   if (loading) {
-    return <p className="py-5 w-100">Loading...</p>;
+    return <Loading />;
   }
 
   if (error) {

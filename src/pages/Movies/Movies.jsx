@@ -5,17 +5,14 @@ import { useFetch } from "../../hooks/useFetch";
 import MovieCard from "../../components/MovieCard/MovieCard";
 import SearchResults from "../../components/SearchResults/SearchResults";
 import { useSearchFilter } from "../../hooks/useSearchFilter";
+import Loading from "../../utils/Loading";
 
 const Movies = () => {
   const { data, error, loading, updateUI } = useFetch("/api/movie/movies");
   const { userInput, filteredMovies } = useSearchFilter(data);
 
   if (loading) {
-    return (
-      <div className="py-5">
-        <p>Loading</p>
-      </div>
-    );
+    return <Loading />;
   }
 
   if (error) {
